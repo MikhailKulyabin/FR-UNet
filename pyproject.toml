@@ -1,0 +1,62 @@
+[project]
+name = "frunet"
+version = "0.0.1"
+requires-python = ">=3.10"
+description = "FR-UNet"
+readme = "README.md"
+
+dependencies = [
+    "torch @ https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.1.2%2Bcpu.cxx11.abi-cp311-cp311-linux_x86_64.whl",
+    "torchvision==0.16.2",
+    "albumentations==0.5.2",
+    "bunch==1.0.1",
+    "loguru==0.5.3",
+    "matplotlib==3.3.2",
+    "numpy==1.25.0",
+    "opencv-python==4.4.0.46",
+    "Pillow==9.0.1",
+    "ruamel.base==1.0.0",
+    "scikit-learn==1.0.2",
+    "segmentation==0.2.2",
+    "timm==0.3.2",
+    "tqdm==4.61.1",
+    "ttach==0.0.3",
+    "yacs==0.1.8"
+]
+
+[project.urls]
+homepage = "https://github.com/MikhailKulyabin/FR-UNet"
+repository = "https://github.com/MikhailKulyabin/FR-UNet"
+
+[build-system]
+requires = ["setuptools>=67.8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.codespell]
+skip = '.git,*.pdf,*.svg'
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.setuptools]
+packages = ["frunet"]
